@@ -1,0 +1,18 @@
+@mixin break-min($length) {
+    @media (min-width: $length) {
+        @content;
+    }
+}
+
+@mixin break-max($length) {
+    @media (max-width: $length) {
+        @content;
+    }
+}
+
+@mixin bg($url, $size:cover, $position: center) {
+    background-image: url($url);
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: $position;
+}

@@ -1,0 +1,169 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: $gray;
+    height: 100%;
+    font-family: 'Open Sans';
+}
+
+.bg-blue {
+    background: $dark-blue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .3s ease;
+
+
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+
+
+    &:focus {
+        color: purple;
+    }
+
+    &:active {
+        color: purple;
+    }
+}
+
+// Banner
+.banner {
+    height: 300px;
+    position: relative;
+
+    @include bg('/images/fittings.jpg');
+
+    h1 {
+        z-index: 9;
+    }
+
+    &::before {
+        content: "";
+        background: rgba($dark-blue, .5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Category
+.image-wrap {
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+// card
+.card {
+    border: none;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+
+    &:hover {
+        outline: 4px solid rgba($red, .88);
+    }
+}
+
+// product tab
+// Section 2
+
+.tab {
+    margin-bottom: 0;
+    position: relative;
+    background: $dark-blue;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding: 1rem 3rem 1rem 1rem;
+    color: $white;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 57px solid $gray;
+        border-right: 30px solid transparent;
+        position: absolute;
+        transform: rotate(180deg);
+        right: 0;
+        top: 0;
+    }
+
+    &:hover {
+        background: $red;
+    }
+
+    @include break-max(992px) {
+        width: 100%;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.dropdown-wrap {
+    padding: 3rem;
+    background: $light-blue;
+    transition: all .3s ease-in-out;
+
+    .data-group {
+        display: none;
+    }
+}
+
+.dropdown-wrap .image-wrap {
+    img {
+        width: 50%;
+        padding: 1.5rem;
+    }
+}
+
+// Card-columns
+
+.card-columns {
+    margin: 0 -15px;
+}
+
+.card-columns {
+    @include break-min(576px) {
+        column-count: 2;
+    }
+
+    @include break-min(768px) {
+        column-count: 2;
+    }
+
+    @include break-min(992px) {
+        column-count: 3;
+    }
+}
+
+.active {
+    background: $red;
+}
+
+.show {
+    display: block !important;
+}
+
+// Hide checkbox
+input[type=checkbox] {
+    display: none;
+}

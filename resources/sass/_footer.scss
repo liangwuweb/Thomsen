@@ -1,0 +1,30 @@
+// Footer
+footer {
+    background: $white;
+
+    .footer {
+        padding: 2rem 0;
+
+        .contact:nth-child(1) {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        .contact:nth-child(2) {
+            border-left: 1px solid #e6e6e6;
+        }
+
+        .contact:nth-child(2) p {
+            line-height: 18px;
+        }
+
+        a:hover {
+            color: $red;
+        }
+    }
+
+    .copy-right {
+        padding: .5rem;
+        background: $red;
+        font-size: .7rem;
+    }
+}

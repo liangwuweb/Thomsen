@@ -1,0 +1,90 @@
+// Fonts ------------------------------------------------------
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Bold.eot');
+    src: url('/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('/fonts/OpenSans-Bold.woff') format('woff'),
+        url('/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Italic.eot');
+    src: url('/fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-Italic.woff2') format('woff2'),
+        url('/fonts/OpenSans-Italic.woff') format('woff'),
+        url('/fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-SemiBold.eot');
+    src: url('/fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('/fonts/OpenSans-SemiBold.woff') format('woff'),
+        url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Regular.eot');
+    src: url('/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('/fonts/OpenSans-Regular.woff') format('woff'),
+        url('/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// Bootstrap coustomize -------------------------------
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1280px,
+);
+
+
+//Project Variables
+// Color 
+$light-gray: #e6e6e6;
+$gray: #c3c7d0;
+$light-blue: #edeef0;
+$dark-blue: #061e57;
+$dark-red: #be1b26;
+
+//Spacing
+$spacer: 1rem;
+$spacers: (6: ($spacer * 5), 7:($spacer * 6), 8: ($spacer * 8));

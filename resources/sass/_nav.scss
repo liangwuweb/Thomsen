@@ -1,0 +1,30 @@
+header {
+    background: $white;
+}
+
+
+.topnav {
+    padding: 2rem 0;
+}
+
+.navbar {
+    padding: 1.5rem 1rem;
+
+    .nav-link {
+        @include break-min(992px) {
+            padding-right: 1.5rem !important;
+            padding-left: 1.5rem !important;
+        }
+
+        &:hover {
+            color: $red !important;
+        }
+    }
+
+    .active {
+        color: $red !important;
+        background: none;
+        font-weight: 900;
+    }
+
+}
