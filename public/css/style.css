@@ -13434,6 +13434,13 @@ a:active {
   }
 }
 
+@media (min-width: 992px) {
+  .card-columns-two {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+}
+
 .active {
   background: #dc3545;
 }

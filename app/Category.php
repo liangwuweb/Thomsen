@@ -34,4 +34,12 @@ class Category extends Model
     public function download() {
         return $this->hasOne('App\Download', 'category_id');
     }
+
+    public function video() {
+        return $this->hasOne('App\Video', 'category_id');
+    }
+
+    public function misc() {
+        return $this->hasOne('App\Misc', 'category_id');
+    }
 }

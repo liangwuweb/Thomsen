@@ -136,12 +136,9 @@ a {
 }
 
 // Card-columns
-
 .card-columns {
     margin: 0 -15px;
-}
 
-.card-columns {
     @include break-min(576px) {
         column-count: 2;
     }
@@ -152,6 +149,12 @@ a {
 
     @include break-min(992px) {
         column-count: 3;
+    }
+}
+
+.card-columns-two {
+    @include break-min(992px) {
+        column-count: 2;
     }
 }
 
