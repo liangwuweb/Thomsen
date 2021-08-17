@@ -88,3 +88,8 @@ $dark-red: #be1b26;
 //Spacing
 $spacer: 1rem;
 $spacers: (6: ($spacer * 5), 7:($spacer * 6), 8: ($spacer * 8));
+
+// Theme Colors
+$theme-colors: (
+    "red": $dark-red
+);

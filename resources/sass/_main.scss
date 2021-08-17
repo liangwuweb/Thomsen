@@ -1,1 +1,53 @@
+.carousel .carousel-item {
+    height: 700px;
+}
 
+.trans-layer {
+    width: 100%;
+    background: rgba($dark-blue, .7);
+    z-index: 1;
+    position: absolute;
+    opacity: .7;
+    min-height: 700px;
+    max-height: 700px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 700px;
+    max-height: 700px;
+}
+
+.carousel-indicators {
+    left: auto;
+    right: 0;
+    justify-content: end;
+    margin-right: 2%;
+
+    li {
+        width: 80px;
+        height: 7px;
+        background-color: $light-blue;
+        opacity: 1;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .active {
+        background: $dark-red;
+    }
+}
+
+.hero-wrap {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    height: 700px;
+    z-index: 5;
+}

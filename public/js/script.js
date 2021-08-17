@@ -3,33 +3,33 @@ let allCheckbox = document.querySelectorAll('.toggle');
 
 // Sync Target and add active to tab
 function syncTarget() {
-  allCheckbox.forEach(function (item) {
-    let label = document.getElementById(item.dataset.label);
-    let target = document.getElementById(item.dataset.target);
-    let checkboxStatus = item.checked;
+    allCheckbox.forEach(function (item) {
+        let label = document.getElementById(item.dataset.label);
+        let target = document.getElementById(item.dataset.target);
+        let checkboxStatus = item.checked;
 
-    if (checkboxStatus) {
-      label.classList.add('active');
-      target.classList.add('show');
-    } else {
-      label.classList.remove('active');
-      target.classList.remove('show');
-    }
-  });
+        if (checkboxStatus) {
+            label.classList.add('active');
+            target.classList.add('show');
+        } else {
+            label.classList.remove('active');
+            target.classList.remove('show');
+        }
+    });
 }
 
 // check one tab and uncheck other tab
 function changeTab(obj) {
-  let checkboxId = obj.dataset.for;
-  let checkbox = document.getElementById(checkboxId);
+    let checkboxId = obj.dataset.for;
+    let checkbox = document.getElementById(checkboxId);
 
-  allCheckbox.forEach(function (item) {
-    item.checked = false;
-  })
+    allCheckbox.forEach(function (item) {
+        item.checked = false;
+    })
 
-  checkbox.checked = true;
+    checkbox.checked = true;
 
-  syncTarget();
+    syncTarget();
 }
 
 // Keep the first tab checked
@@ -40,4 +40,5 @@ syncTarget();
 
 
 console.log(allCheckbox);
+
 
