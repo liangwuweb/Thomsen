@@ -13713,6 +13713,14 @@ header {
   z-index: 5;
 }
 
+a.category-item:hover {
+  background: #007bff !important;
+}
+
+.specialty-product .card {
+  pointer-events: none;
+}
+
 footer {
   background: #fff;
 }

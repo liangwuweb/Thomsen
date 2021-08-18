@@ -4,31 +4,20 @@
 @section('content')
     {{-- <h1>{!! $product->part->content !!}</h1> --}}
     <div class="container my-6">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-12">
                 <h1 class="font-weight-bold text-capitalize text-danger">{{ $product->description->title }}</h1>
             </div>
             <div class="col-md-7">
-                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus nisi et risus auctor
-                    malesuada. Quisque egestas ac mauris id pulvinar. Nunc at iaculis quam. Orci varius natoque penatibus et
-                    magnis dis parturient montes, nascetur ridiculus mus. Sed et massa iaculis, interdum metus vel, pretium
-                    est.</p>
-                <ul>
-                    <li>360 rotation</li>
-                    <li>Sanitary 316 Design</li>
-                    <li>CIP - Clean In Place</li>
-                    <li>Low & High Pressure</li>
-                    <li>Clamp, Weld & many other connections avail</li>
-                    <li>Seals available in Buna, Vision, EPDM & Silicone</li>
-                    <li>32Ra Surface Finish (other finishes available)</li>
-                    <li>Temp Range to 360F</li>
-                </ul> --}}
                 {!! $product->description->content !!}
             </div>
             <div class="col-md-5">
                 <img class="img-fluid" src="{{ asset($product->description->image) }}" alt="">
             </div>
-        </div>
+        </div> --}}
+
+        {{-- {!! $product->description->title !!} --}}
+        {{ (!is_null($product->description))? 'null':'' }}
 
         <div class="row">
             <div class="col-md-12 mt-6">
