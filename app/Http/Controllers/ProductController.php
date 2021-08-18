@@ -11,8 +11,7 @@ class ProductController extends Controller
     //
     public function getProduct($id) {
 
-        //return $id;
-
+        
         $product = Category::find($id);
         // $info = 'Product info about: ' . $product->name;
         // return $info;

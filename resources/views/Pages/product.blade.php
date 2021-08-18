@@ -4,20 +4,17 @@
 @section('content')
     {{-- <h1>{!! $product->part->content !!}</h1> --}}
     <div class="container my-6">
-        {{-- <div class="row">
+        <div class="row">
             <div class="col-md-12">
-                <h1 class="font-weight-bold text-capitalize text-danger">{{ $product->description->title }}</h1>
+                <h1 class="font-weight-bold text-capitalize text-danger">{{ $product->description()->first()->title }}</h1>
             </div>
             <div class="col-md-7">
-                {!! $product->description->content !!}
+                {!! $product->description()->first()->content !!}
             </div>
             <div class="col-md-5">
-                <img class="img-fluid" src="{{ asset($product->description->image) }}" alt="">
+                <img class="img-fluid" src="{{ asset($product->description()->first()->image) }}" alt="">
             </div>
-        </div> --}}
-
-        {{-- {!! $product->description->title !!} --}}
-        {{ (!is_null($product->description))? 'null':'' }}
+        </div>
 
         <div class="row">
             <div class="col-md-12 mt-6">
@@ -155,7 +152,9 @@
                                         </ul>
                                     </div>
                                 </div> --}}
-                                {!! $product->part->content !!}
+                                {!! $product->getRelationValue('part')->content !!}
+                                {!! $product->part()->first()->content !!}
+                                {{-- {!! $product->part->getRelationValue('content') !!} --}}
                             </div>
                         </div>
                     @endif

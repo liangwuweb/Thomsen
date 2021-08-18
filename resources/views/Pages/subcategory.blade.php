@@ -37,7 +37,7 @@
                 <li class="list-group-item">long life durable seals</li>
                 <li class="list-group-item">several elastomer choices</li>
             </ul> --}}
-            {{-- {!! $category->description !!} --}}
+            {!! $category->cat_description !!}
 
         </div>
     </div>

@@ -16,9 +16,9 @@ class CategoryController extends Controller
     }
 
     public function getSubcatgory($id) {
-        // $category = Category::where('id',$id)->first();
+        $category = Category::where('id',$id)->first();
         $subcategories = Category::where('parent_id',$id)->get();
-        return view('Pages.subcategory')->withSubcategories($subcategories)->withPage('category');
+        return view('Pages.subcategory')->withSubcategories($subcategories)->withCategory($category)->withPage('category');
         //return $subcategories;
     }
 }
