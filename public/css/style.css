@@ -13639,6 +13639,8 @@ header {
 
 .navbar {
   padding: 1.5rem 1rem;
+  background: #1c3d8f;
+  background: linear-gradient(219deg, #1c3d8f 0%, #061e57 62%, #061e57 100%);
 }
 
 @media (min-width: 992px) {
@@ -13719,6 +13721,10 @@ a.category-item:hover {
 
 .specialty-product .card {
   pointer-events: none;
+}
+
+#gallery .pic {
+  cursor: pointer;
 }
 
 footer {

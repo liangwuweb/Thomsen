@@ -9,6 +9,10 @@ header {
 
 .navbar {
     padding: 1.5rem 1rem;
+    background: rgb(28,61,143);
+    background: linear-gradient(
+219deg
+, rgba(28,61,143,1) 0%, rgba(6,30,87,1) 62%, rgba(6,30,87,1) 100%);
 
     .nav-link {
         @include break-min(992px) {

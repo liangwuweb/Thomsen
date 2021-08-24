@@ -283,7 +283,7 @@
                     @if(!is_null($product->tech_info)) 
                         <div id="dataThree" class="data-group">
                             <h3 class="font-weight-bold text-capitalize mb-4">Exploded View</h3>
-                            <div class="card-columns mb-6">
+                            <div  id="gallery" class="card-columns mb-6">
                                 {{-- <div class="col mb-4 inline-block">
                                     <img class="img-fluid" src="/images/pump2.jpg" alt="">
                                 </div>
@@ -303,7 +303,30 @@
                                     <img class="img-fluid" src="/images/pump2.jpg" alt="">
                                 </div> --}}
                                 
-                                    {!! $product->tech_info->explode_view !!}
+                                
+                                    @php
+                                        $image_string = $product->tech_info->explode_view;
+                                        $image_array = explode(",",  $image_string);
+                                        //print_r($image_array);
+                                    @endphp
+                                   
+                                        
+                                          <div
+                                            v-for="(src, index) in imgs"
+                                            :key="index"
+                                            class="pic col mb-4 inline-block"
+                                            @click="() => showImg(index)"
+                                          >
+                                            <img class="img-fluid" :src="src" />
+                                          </div>
+                                        
+                                        <vue-easy-lightbox
+                                          :visible="visible"
+                                          :imgs="imgs"
+                                          :index="index"
+                                          @hide="handleHide"
+                                        ></vue-easy-lightbox>
+                                      
                             </div>
 
                             <h3 class="font-weight-bold text-capitalize">Seal Info</h3>
@@ -433,4 +456,35 @@
 
 @section('scripts')
     {!! Html::script('js/script.js') !!}
+    <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-easy-lightbox@1.2.3/dist/vue-easy-lightbox.umd.min.js"></script>
+    <script>
+        // Note: The Global Vue Constructor is no longer available in Vue 3.0.
+        // https://v3.vuejs.org/guide/migration/global-api.html#a-new-global-api-createapp
+        const image = {!! json_encode($image_array) !!};
+        console.log(image);
+
+        const app = Vue.createApp({
+          data() {
+            return {
+              visible: false,
+              index: 0, // default: 0
+              imgs: image
+            }
+          },
+          methods: {
+            showImg(index) {
+              this.index = index
+              this.visible = true
+            },
+            handleHide() {
+              this.visible = false
+            }
+          }
+        })
+        // Registering VueEasyLightbox for your VueApp.
+        app.use(VueEasyLightbox)
+           
+        app.mount('#gallery')
+      </script>
 @endsection
