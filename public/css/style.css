@@ -13629,6 +13629,23 @@ input[type=checkbox] {
   display: none;
 }
 
+.breadcrumb {
+  border-radius: 0;
+  margin-bottom: 2.5rem;
+}
+
+.breadcrumb .active {
+  background: none;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: #234eb7;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  color: #ffc107;
+}
+
 header {
   background: #fff;
 }
@@ -13867,6 +13884,11 @@ header {
     width: 0%;
     left: 50%;
   }
+}
+
+.subcat .breadcrumb {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .carousel .carousel-item {

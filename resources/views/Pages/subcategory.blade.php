@@ -3,7 +3,8 @@
 
 @section('content')
 
-    <div class="container category my-6">
+    <div class="container category my-6 subcat">
+        {{ Breadcrumbs::render('subcategory.menu', $category) }}
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 mx-n4">
 
             @foreach ($subcategories as $subcategory)

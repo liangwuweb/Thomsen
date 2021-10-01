@@ -170,3 +170,20 @@ a {
 input[type=checkbox] {
     display: none;
 }
+
+.breadcrumb {
+    border-radius: 0;
+    margin-bottom: 2.5rem;
+
+    .active {
+        background: none;
+    }
+
+    .breadcrumb-item a {
+        color: $md-blue;
+
+        &:hover {
+            color: $warning;
+        }
+    }
+}

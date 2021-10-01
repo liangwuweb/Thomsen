@@ -3,7 +3,9 @@
 
 @section('content')
     @include('partials._banner', ['title' => 'Main Categories', 'image' => '/images/fittings.jpg'])
+
     <div class="container category my-6">
+        {{ Breadcrumbs::render('category') }}
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
             @foreach ($parentCategories as $category)
                 {{-- <div class="col-md-4">

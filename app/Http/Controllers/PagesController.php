@@ -6,10 +6,10 @@
 
     class PagesController extends Controller {
         public function getIndex() {
-            $image = array('https://via.placeholder.com/450.png/',
-            'https://via.placeholder.com/300.png/',
-            'https://via.placeholder.com/150.png/');
-            return view('Pages.welcome')->withPage('')->withImage($image);
+            // $image = array('https://via.placeholder.com/450.png/',
+            // 'https://via.placeholder.com/300.png/',
+            // 'https://via.placeholder.com/150.png/');
+            return view('Pages.welcome')->withPage('');
         }
 
         public function getCat($id) {

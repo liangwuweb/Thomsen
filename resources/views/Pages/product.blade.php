@@ -4,6 +4,7 @@
 @section('content')
     {{-- <h1>{!! $product->part->content !!}</h1> --}}
     <div class="container my-6">
+        {{ Breadcrumbs::render('product', $product) }}
         <div class="row">
             <div class="col-md-12">
                 <h1 class="font-weight-bold text-capitalize text-danger">{{ $product->description()->first()->title }}</h1>
@@ -461,7 +462,7 @@
     <script>
         // Note: The Global Vue Constructor is no longer available in Vue 3.0.
         // https://v3.vuejs.org/guide/migration/global-api.html#a-new-global-api-createapp
-        const image = {!! json_encode($image_array) !!};
+        const image = {!! json_encode($image_array ?? '') !!};
         console.log(image);
 
         const app = Vue.createApp({

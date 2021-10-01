@@ -13,9 +13,9 @@
 
 //Route::get('cat/{id}', 'PagesController@getCat')->where('id', '(1|2|3)');
 
-Route::get('category', 'CategoryController@getIndex');
+Route::get('category', 'CategoryController@getIndex')->name('category');
 
-Route::get('product/{id}', 'ProductController@getProduct');
+Route::get('product/{id}', 'ProductController@getProduct')->name('product');
 
 Route::get('subcategory/{id}',
   [
