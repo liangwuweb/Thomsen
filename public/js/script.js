@@ -40,3 +40,4 @@ syncTarget();
 
 
 console.log(allCheckbox);
+console.log('Hello');

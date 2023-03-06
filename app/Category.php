@@ -45,4 +45,12 @@ class Category extends Model
     public function misc() {
         return $this->hasOne('App\Misc', 'category_id');
     }
+
+    public function number_system() {
+        return $this->hasOne('App\Number_system', 'category_id');
+    }
+
+    public function stainer() { 
+        return $this->hasOne('App\Stainer', 'category_id');
+    }
 }

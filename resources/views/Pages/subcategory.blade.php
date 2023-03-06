@@ -13,7 +13,7 @@
                     href="{{ count($subcategory->subcategory) ? url('subcategory/' . $subcategory->id) : url('product/' . $subcategory->id) }}">{{ $subcategory->name }}</a> --}}
 
 
-                <div class="col">
+                <div class="col mb-3">
                     <a href="{{ count($subcategory->subcategory) ? url('subcategory/' . $subcategory->id) : url('product/' . $subcategory->id) }}"
                         class="card h-100">
                         <div class="image-wrap">
