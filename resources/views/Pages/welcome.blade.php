@@ -26,9 +26,11 @@
             <div class="d-flex flex-column justify-content-center hero-container">
                 <h1 class="text-center font-weight-bold">THOMSEN GROUP</h1>
                 <p class="lead text-center">
-                    proidentsunt in culpa qui officia deserunt
+                For 90 years, L. C. Thomsen has been
+supplying high quality products to the
+dairy, food and beverage industry.
                 </p>
-                <a class="btn btn-lg btn-red mx-auto mt-4" href="#" role="button">LEARN
+                <a class="btn btn-lg btn-red mx-auto mt-4" href="/about" role="button">LEARN
                     MORE</a>
             </div>
         </div>
